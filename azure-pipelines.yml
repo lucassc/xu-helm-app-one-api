@@ -19,7 +19,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'devxuxu'
+        containerRegistry: 'ACR devXuxu'
         repository: 'xu-helm/app-one-api'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
