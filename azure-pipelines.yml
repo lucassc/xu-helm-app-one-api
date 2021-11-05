@@ -23,6 +23,7 @@ stages:
         ApplicationName: 'xu-helm-app-one-api'
         BaseDir: '.'
         SourcePath: '.'
+        ExclusionPaths: 'dist/**/*,node_modules/**/*'
 
     - task: Docker@2
       displayName: Build an image
