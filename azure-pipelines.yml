@@ -1,4 +1,3 @@
-
 trigger:
 - main
 
@@ -16,6 +15,14 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    - task: DB1CodeQualityChecker@0
+      inputs:
+        ClientName: 'schwendler'
+        ApplicationName: 'xu-helm-app-one-api'
+        BaseDir: '.'
+        SourcePath: '.'
+        AppLanguage: 'js'
+
     - task: Docker@2
       displayName: Build an image
       inputs:
