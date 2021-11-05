@@ -15,13 +15,14 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    
     - task: DB1CodeQualityChecker@0
       inputs:
+        TaskPath: '/home/vsts/work/_tasks/DB1CodeQualityChecker_b7776e79-2995-4cd3-8354-ccc2c5ae21a4/0.1.6/'
         ClientName: 'schwendler'
         ApplicationName: 'xu-helm-app-one-api'
         BaseDir: '.'
         SourcePath: '.'
-        AppLanguage: 'js'
 
     - task: Docker@2
       displayName: Build an image
